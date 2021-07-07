@@ -1,4 +1,6 @@
 import * as React from "react"
+import Headroom from "react-headroom"
+import { useEffect, useState } from "react"
 
 // styles
 const pageStyles = {
@@ -127,8 +129,28 @@ const links = [
 
 // markup
 const IndexPage = () => {
+
+  const [count, setCount] = useState(0)
+  const clickHandler = () => {
+    console.log("clicked")
+    return (
+      setCount(count+1)
+    )
+  }
+
   return (
+
     <main style={pageStyles}>
+      <Headroom>
+        <nav style={{
+          background: "pink",
+          height: "100px",
+          color: "blue",
+        }}>
+          Hello
+        </nav>
+        <button onClick={() => setCount(count+1)}>{count}</button>
+      </Headroom>
       <title>Home Page</title>
       <h1 style={headingStyles}>
         Congratulations

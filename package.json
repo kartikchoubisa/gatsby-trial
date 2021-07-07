@@ -17,6 +17,7 @@
   "dependencies": {
     "gatsby": "^3.8.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-headroom": "^3.1.1"
   }
 }
